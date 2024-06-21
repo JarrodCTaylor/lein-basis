@@ -8,7 +8,7 @@
 (defn update-lein-basis [current-basis derived-basis]
   (if current-basis current-basis derived-basis))
 
-(defn bootstrap []
+(defn bootstrap [& args]
   (let [cp (get-classpath (project/read))
         deps (filter #(str/includes? % "/.m2/") cp)
         dep-parts (map (fn [dep] (butlast (drop 2 (drop-while #(not= ".m2" %) (str/split dep #"/"))))) deps)
@@ -20,4 +20,4 @@
     (update-basis! update-lein-basis bootstrapped-basis)))
 
 (defn -main [& args]
-  (bootstrap))
+  (bootstrap {}))
