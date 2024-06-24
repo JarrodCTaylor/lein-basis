@@ -4,6 +4,6 @@
         leiningen-core/leiningen-core {:mvn/version "2.9.1"}}
 
  :tools/usage {:ns-default lein-basis.core
-               :exec-fn lein-basis.core/bootstrap}
+               :exec-args {:exec-fn lein-basis.core/bootstrap}}
 
- :aliases {} }
+ :aliases {}}
