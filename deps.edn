@@ -3,6 +3,7 @@
  :deps {org.clojure/clojure {:mvn/version "1.11.1"}
         leiningen-core/leiningen-core {:mvn/version "2.9.1"}}
 
- :tools/usage {:ns-default lein-basis.core}
+ :tools/usage {:ns-default lein-basis.core
+               :exec-fn lein-basis.core/bootstrap}
 
  :aliases {} }
