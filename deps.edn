@@ -1,10 +1,8 @@
-{:paths ["resources" "src" "test"]
+{:paths ["src"]
 
- :deps {org.clojure/clojure {:mvn/version "1.11.1"}
+ :deps {org.clojure/clojure {:mvn/version "1.12.0-beta1"}
         leiningen-core/leiningen-core {:mvn/version "2.9.1"}}
 
- :tools/usage {:ns-default lein-basis.core
-               :exec-args {:exec-fn lein-basis.core/bootstrap}
-               :fn lein-basis.core/bootstrap}
+ :tools/usage {:ns-default lein-basis.core}
 
  :aliases {}}

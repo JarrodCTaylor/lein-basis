@@ -18,6 +18,3 @@
         repos (reduce (fn [res [repo url]] (assoc res repo url)) {} (:repositories (project/read)))
         bootstrapped-basis {:libs libs :mvn/repos repos}]
     (update-basis! update-lein-basis bootstrapped-basis)))
-
-(defn -main [& args]
-  (bootstrap {}))
